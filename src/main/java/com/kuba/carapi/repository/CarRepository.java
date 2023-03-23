@@ -10,6 +10,6 @@ import java.util.List;
 @Repository
 public interface CarRepository extends JpaRepository<Car, Long> {
 
-    @Query("SELECT cars FROM cars WHERE color = :color")
-    List<Car> findCarsByColor(String color);
+    @Query("SELECT cars.color FROM cars WHERE color = :color")
+    List<Car> findAllByColor(String color);
 }

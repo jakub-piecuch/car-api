@@ -24,7 +24,7 @@ public class CarService {
     }
 
     public List<Car> getCarsByColor(String color) {
-        return carRepository.findCarsByColor(color);
+        return carRepository.findAllByColor(color);
     }
 
     public Car addCar(Car car){
